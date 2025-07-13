@@ -12,3 +12,5 @@ function aboutPageDisplay() {
     contentSection.appendChild(p1);
 
 }
+
+export {aboutPageDisplay}

@@ -1,5 +1,7 @@
 import "./style.css";
 import foodImage from "./assets/food.png";
+import { aboutPageDisplay } from "./about";
+import { contactPageDisplay } from "./contact";
 
 // Array for menu items
 const kenyanFoods = [
@@ -27,6 +29,7 @@ const kenyanFoods = [
 // DOM Logic
 (function homeDisplay() {
     const contentSection = document.getElementById("content");
+    contentSection.innerHTML = "";
     const image = document.createElement("img");
     image.src = foodImage;
     const h1 = document.createElement("h1");
@@ -48,4 +51,12 @@ const kenyanFoods = [
     contentSection.appendChild(p1);
     contentSection.appendChild(h2);
     contentSection.appendChild(menu);
+
+    // Creating button functionality
+    const homeButton = document.getElementById("home");
+    homeButton.addEventListener("click", homeDisplay);
+    const aboutButton = document.getElementById("about");
+    aboutButton.addEventListener("click", aboutPageDisplay);
+    const contactButton = document.getElementById("contact");
+    contactButton.addEventListener("click", contactPageDisplay);
 })()
